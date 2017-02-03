@@ -1,3 +1,17 @@
+{% assign current = page.url | downcase | split: '/' %}
 <header>
-
+    <div class="ui secondary pointing menu">
+        <a class="item {% if current[1] == 'home' %} active{% endif %}" href="/home" title="home">
+            Home
+        </a>
+        <a class="item {% if current[1] == 'cv' %} active{% endif %}" href="/cv" title="cv">
+            CV
+        </a>
+        <a class="item {% if current[1] == 'about' %} active{% endif %}" href="/about" title="about">
+            About
+        </a>
+        <a class="item {% if current[1] == 'blog' %} active{% endif %}" href="/blog" title="blog">
+            Blog
+        </a>
+    </div>
 </header>

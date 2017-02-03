@@ -1,29 +1,22 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul>
-	        		<li><a href="/">Home</a></li>
-		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
-	        		<li><a href="/blog">Blog</a></li>
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="mailto:youhandan@163.com">email</a></li>
-	        		<li><a href="https://github.com/Youhandan">github.com/youhandan</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+<div class="container">
+
+	{% include header.html %}
+
+	{{ content }}
+
+	{% include footer.html %}
+
+</div> <!-- /container -->
+
+
+{% include scripts.html %}
+
+</body>
+
+</html>

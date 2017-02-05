@@ -1,0 +1,17 @@
+{% assign current = page.url | downcase | split: '/' %}
+<div class="ui left vertical menu sidebar ">
+    <a class="item {% if current[1] == null %} active{% endif %}" href="/" title="home">
+        Home
+    </a>
+    <a class="item {% if current[1] == 'blog' %} active{% endif %}" href="/blog" title="blog">
+        Blog
+    </a>
+    <a class="item {% if current[1] == 'cv' %} active{% endif %}" href="/cv" title="cv">
+        CV
+    </a>
+    <a class="item {% if current[1] == 'about' %} active{% endif %}" href="/about" title="about">
+        About
+    </a>
+</div>
+
+

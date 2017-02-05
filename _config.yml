@@ -1,3 +1,10 @@
-name: 菡萏
+# Site Info
+title: 菡萏
+url: http://youhandan.github.io
+logo: '/img/logo.png'
+
+# Site configurations
 markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
+sass:
+  sass_dir: /_scss
+  style: compressed

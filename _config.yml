@@ -9,3 +9,8 @@ sass:
   sass_dir: /_scss
   style: compressed
 permalink: /blog/:year/:month/:day/:title
+# Comment setting
+comments :
+  provider : duoshuo
+  duoshuo :
+    short_name : youhandan //替换为你刚刚注册的短名

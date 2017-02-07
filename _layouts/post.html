@@ -1,0 +1,21 @@
+---
+layout: page
+---
+<h2 class="ui green header">
+    <div class="content">
+        {{ page.title }}
+        <div class="sub grey header">
+            <p>
+                <i class="calendar icon"></i>
+                {{ page.date | date_to_string }}
+            <div class="ui vertical divider"></div>
+                <i class="folder open outline icon"></i>
+                {{ page.category }}
+            </p>
+
+        </div>
+    </div>
+</h2>
+<div class="post">
+    {{ content }}
+</div>

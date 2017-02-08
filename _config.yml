@@ -4,11 +4,24 @@ url: http://youhandan.github.io
 logo: '/img/logo.png'
 
 # Site configurations
+gems:
+  - jekyll-paginate
 markdown: kramdown
+markdown: kramdown
+kramdown:
+  input: GFM
+excerpt_separator: "<!-- more -->"
 sass:
   sass_dir: /_scss
   style: compressed
-permalink: /blog/:year/:month/:day/:title
+paginate: 2
+paginate_path: "/blog/page:num"
+permalink: pretty
+
+# Where are tags and categories displayed
+tag_page: '/blog/tags/'
+category_page: '/blog/categories/'
+
 # Comment setting
 comments :
   provider : duoshuo

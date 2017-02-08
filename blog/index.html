@@ -1,5 +1,78 @@
 ---
 layout: page
-title: Youhandan's Blog
+title: Blog
 ---
-<h1>{{ page.title }}</h1>
+<!-- 页面标题 -->
+<h1 class="ui green dividing header">
+    {{ page.title }}
+</h1>
+<!-- 遍历分页后的文章 -->
+<div class="blog-content">
+    <div class="ui divided items">
+        {% for post in paginator.posts %}
+        <div class="item">
+            <div class="content">
+                <a class="ui green large header" href="{{ post.url }}">{{ post.title }}</a>
+                <div class="meta">
+                    <p>
+                        <i class="calendar icon"></i>
+                            {{ post.date | date_to_string }}
+                            |
+
+                        <i class="folder open outline icon"></i>
+                            {{ post.category }}
+
+                            {% if post.tags %}
+                            |
+                        <i class="tag icon"></i>
+                            {% for tag in post.tags %}
+                            {{ tag }}
+                            {% endfor %}
+                            {% endif %}
+                    </p>
+                </div>
+                <div class="description">
+                    <p>{{ post.excerpt | markdownify }}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+<!-- 分页链接 -->
+{% if paginator.total_pages > 1 %}
+<div class="ui right floated pagination menu">
+    {% if paginator.previous_page %}
+    <a class="icon item" href="{{ paginator.previous_page_path }}">
+        <i class="angle double left icon"></i>
+    </a>
+    {% else %}
+    <span class="icon item">
+        <i class="angle double left icon"></i>
+    </span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+    <a class="active item">{{ page }}</a>
+    {% elsif page == 1 %}
+    <a class="item" href="{{ site.paginate_path | replace: 'page:num', '' }}">{{ page }}</a>
+    {% else %}
+    <a class="item" href="{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a>
+    {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+    <a class="icon item" href="{{ paginator.next_page_path}}">
+        <i class="angle double right icon"></i>
+    </a>
+    {% else %}
+    <span class="icon item">
+        <i class="angle double right icon"></i>
+    </span>
+    {% endif %}
+</div>
+{% endif %}
+

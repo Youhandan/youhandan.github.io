@@ -9,17 +9,17 @@ layout: default
                 <div class="sub grey header">
                     <p>
                         <i class="calendar icon"></i>
-                        {{ page.date | date_to_string }}
-                        |
+                        {{ page.date | date_to_string }}|
 
                         <i class="folder open outline icon"></i>
-                        {{ page.category }}
+                        <a class="ui green mini label" href="/blog/categories/#{{ page.category | slugify }}">
+                            {{ page.category }}
+                        </a>
 
-                        {% if page.tags %}
-                        |
+                        {% if page.tags %}|
                         <i class="tag icon"></i>
                         {% for tag in page.tags %}
-                            {{ tag }}
+                            <a class="ui green mini label" href="/blog/tags/#{{ tag | slugify }}">{{ tag }}</a>
                         {% endfor %}
                         {% endif %}
                     </p>
@@ -31,28 +31,22 @@ layout: default
             {{ content }}
         </div>
 
-        <h2 class="ui dividing green header">
+        <h3 class="ui dividing green header">
             <i class="linkify green icon"></i>
             Related Posts
-        </h2>
+        </h3>
         <div class="post-related">
             <div class="ui link animated list">
                 {% for post in site.related_posts limit:3 %}
-                <a class="item" href="{{ post.url }}">
-                    <h3>
-                        <i class="pointing right icon"></i>
-                        {{ post.title }}
-                        <small>{{ post.date | date_to_string }}</small>
-                    </h3>
-                </a>
+                {% include post-item.html %}
                 {% endfor %}
             </div>
         </div>
 
-        <h2 class="ui dividing green header">
+        <h3 class="ui dividing green header">
             <i class="comments outline green icon"></i>
             Comments
-        </h2>
+        </h3>
         <!-- 多说评论框 start -->
         <div class="ds-thread" data-thread-key={{page.id}} data-title={{page.title}} data-url={{page.url}}></div>
         <!-- 多说评论框 end -->

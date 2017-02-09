@@ -1,12 +1,11 @@
 .page-sidebar-item {
-  padding: 20px;
+  padding: 1rem;
 }
+
 .page-sidebar-nav {
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid rgba(34, 36, 38, 0.15);
 }
+
 .page-sidebar-nav .submenu {
-  padding-left: 20px;
-}
-a {
-  color: $grey;
+  padding-left: 1rem;
 }

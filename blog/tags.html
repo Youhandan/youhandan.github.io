@@ -3,7 +3,7 @@ layout: page
 title: Tags
 ---
 
-<div class="ui tag labels">
+<div class="ui tag large labels">
     {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <a class="ui label" href="#{{ tag_name | slugify }}" >
@@ -12,24 +12,19 @@ title: Tags
     {% endfor %}
 </div>
 
-<h2 class="ui green dividing header"></h2>
+<h3 class="ui green dividing header"></h3>
 
 <div class="ui divided items">
     {% for tag in site.tags %}
     {% capture tag_name %}{{ tag | first }}{% endcapture %}
     <div class="item">
         <div class="content">
-            <h2 class="ui green header" id="{{ tag_name | slugify }}">{{ tag_name }}</h2>
-            <ul class="ui animated list">
+            <h3 class="ui green header" id="{{ tag_name | slugify }}">{{ tag_name }}</h3>
+            <div class="ui animated list">
                 {% for post in site.tags[tag_name] %}
-                <li class="item">
-                    <a href="{{ post.url }}">
-                        {{ post.title }}
-                        <small>{{ post.date | date_to_string }}</small>
-                    </a>
-                </li>
+                {% include post-item.html %}
                 {% endfor %}
-            </ul>
+            </div>
         </div>
     </div>
     {% endfor %}

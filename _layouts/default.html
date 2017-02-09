@@ -4,14 +4,13 @@
 {% include head.html %}
 
 <body>
-
 {% include sidebar.html %}
 <div class="pusher">
-	{% include header.html %}
-	{{ content }}
-	{% include scripts.html %}
+	<div class="ui fluid container">
+		{% include header.html %}
+		{{ content }}
+	</div>
 </div>
-
+{% include scripts.html %}
 </body>
-
 </html>

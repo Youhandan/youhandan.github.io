@@ -1,58 +1,60 @@
 {% assign current = page.url | downcase | split: '/' %}
 <div class="ui left vertical menu sidebar">
-    <div class="page-sidebar-item">
-        <div class="ui centered small circular rotate reveal image">
-            <img src="/img/portrait-hidden.png" class="hidden content">
-            <img src="/img/portrait-show.png" class="visible content">
+    <div class="ui fluid container">
+        <div class="page-sidebar-item">
+            <div class="ui centered small circular rotate reveal image">
+                <img src="/img/portrait-hidden.png" class="hidden content">
+                <img src="/img/portrait-show.png" class="visible content">
+            </div>
+            <div class="ui center aligned header">
+                Live a happy life!
+            </div>
+            <div class="sub header">
+                A passionate girl, <br>
+                learning to be an elegant coder.
+            </div>
         </div>
-        <div class="ui center aligned header">
-            Live a happy life!
-        </div>
-        <div class="sub header">
-            A passionate girl, <br>
-            learning to be an elegant coder.
-        </div>
-    </div>
-    <h4 class="ui horizontal divider">
-        <i class="tag icon"></i>
-        Navigation
-    </h4>
-    <div class="page-sidebar-nav">
-        <a class="item {% if current[1] == null %} active{% endif %}" href="/" title="home">
-            <h5>Home</h5>
-        </a>
-        <a class="item {% if current[1] == 'blog' and current[2] == null %} active{% endif %}" href="/blog" title="blog">
-            <h5>Blog</h5>
-        </a>
-        <a class="item {% if current[2] == 'categories' %} active{% endif %}" href="/blog/categories" title="categories">
-            <span class="submenu">Categories</span>
-        </a>
-        <a class="item {% if current[2] == 'tags' %} active{% endif %}" href="/blog/tags" title="tags">
-            <span class="submenu">Tags</span>
-        </a>
-        <a class="item {% if current[1] == 'about' %} active{% endif %}" href="/about" title="about">
-            <h5>About</h5>
-        </a>
-    </div>
-    <div class="page-sidebar-item">
-        <h5>Contact me :
-            <a href="https://github.com/Youhandan">
-                <i class="github alternate grey icon"></i>
+        <h4 class="ui horizontal divider">
+            <i class="tag icon"></i>
+            Navigation
+        </h4>
+        <div class="page-sidebar-nav">
+            <a class="item {% if current[1] == null %} active{% endif %}" href="/" title="home">
+                <h5>Home</h5>
             </a>
-            |
-            <a href="mailto:youhandan@163.com">
-                <i class="mail outline grey icon"></i>
+            <a class="item {% if current[1] == 'blog' and current[2] == null %} active{% endif %}" href="/blog" title="blog">
+                <h5>Blog</h5>
             </a>
-        </h5>
-    </div>
-    <div class="page-sidebar-item">
-        <i class="copyright icon"></i>2017 Lotus. <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
-    </div>
-    <div class="page-sidebar-item">
-        <p>Powered by
-            <a href="http://jekyllrb.com">jekyll</a>
-            and
-            <a href="http://youhandan.github.io">lotus-handan</a>
+            <a class="item {% if current[2] == 'categories' %} active{% endif %}" href="/blog/categories" title="categories">
+                <span class="submenu">Categories</span>
+            </a>
+            <a class="item {% if current[2] == 'tags' %} active{% endif %}" href="/blog/tags" title="tags">
+                <span class="submenu">Tags</span>
+            </a>
+            <a class="item {% if current[1] == 'about' %} active{% endif %}" href="/about" title="about">
+                <h5>About</h5>
+            </a>
+        </div>
+        <div class="page-sidebar-item">
+            <h5>Contact me :
+                <a href="https://github.com/Youhandan">
+                    <i class="github alternate grey icon"></i>
+                </a>
+                |
+                <a href="mailto:youhandan@163.com">
+                    <i class="mail outline grey icon"></i>
+                </a>
+            </h5>
+        </div>
+        <div class="page-sidebar-item">
+            <i class="copyright icon"></i>2017 Lotus. <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"></a>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a>.
+        </div>
+        <div class="page-sidebar-item">
+            <p>Powered by
+                <a href="http://jekyllrb.com">jekyll</a>
+                and
+                <a href="http://youhandan.github.io">lotus-handan</a>
+        </div>
     </div>
 </div>
 

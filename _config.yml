@@ -1,7 +1,7 @@
 # Site Info
 title: 菡萏
 url: http://youhandan.github.io
-logo: '/img/logo.png'
+logo: '/img/system/logo.png'
 
 # Site configurations
 gems:

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: I have a dream
-category: 随笔
-tags: [亲情]
+category: 人生历程
+tags: [人生感悟]
 date: 2010-08-18
 ---
 

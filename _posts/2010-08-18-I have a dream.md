@@ -10,7 +10,7 @@ I have a dream
 Leaving behind the whole world  
 With my mom  
 living in another world where no sadness
-
+<!-- more -->
  
 
 But  

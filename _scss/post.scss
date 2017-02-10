@@ -6,6 +6,9 @@
   font-family: 'Times New Roman';
   font-size: 1.4rem;
 }
+.post-content p {
+  line-height: 180%;
+}
 .post-content a {
   color: $green;
 }

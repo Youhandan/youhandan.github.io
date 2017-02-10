@@ -12,14 +12,14 @@ layout: default
                         {{ page.date | date_to_string }}|
 
                         <i class="folder open outline icon"></i>
-                        <a class="ui green mini label" href="/blog/categories/#{{ page.category | slugify }}">
+                        <a class="ui green large label" href="/blog/categories/#{{ page.category | slugify }}">
                             {{ page.category }}
                         </a>
 
                         {% if page.tags %}|
                         <i class="tag icon"></i>
                         {% for tag in page.tags %}
-                            <a class="ui green mini label" href="/blog/tags/#{{ tag | slugify }}">{{ tag }}</a>
+                            <a class="ui green large label" href="/blog/tags/#{{ tag | slugify }}">{{ tag }}</a>
                         {% endfor %}
                         {% endif %}
                     </p>

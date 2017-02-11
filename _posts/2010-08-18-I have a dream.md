@@ -1,7 +1,7 @@
 ---
 layout: post
 title: I have a dream
-category: 人生历程
+category: 人生感悟
 tags: [人生感悟]
 date: 2010-08-18
 ---

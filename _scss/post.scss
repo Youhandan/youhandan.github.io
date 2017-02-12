@@ -6,8 +6,20 @@
   font-family: 'Times New Roman';
   font-size: 1.4rem;
 }
-.post-content p {
+.post-content p, li, td, th, center {
   line-height: 180%;
+}
+
+.post-content table {
+  margin: 0 auto;
+}
+
+.post-content em {
+  color: #a80000;
+}
+.post-content td, th {
+  border: 1px solid green;
+  padding: 0 2rem;
 }
 .post-content a {
   color: $green;

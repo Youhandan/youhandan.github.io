@@ -17,6 +17,11 @@
 .post-content em {
   color: #a80000;
 }
+
+.post-content hr {
+  color: $green;
+}
+
 .post-content td, th {
   border: 1px solid green;
   padding: 0 2rem;

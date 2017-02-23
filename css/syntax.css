@@ -1,6 +1,7 @@
 pre[class='highlight'] {
   background-color:#000000;
   padding: 20px;
+  border-radius: 10px;
 }
 
 code[class='highlighter-rouge'] {

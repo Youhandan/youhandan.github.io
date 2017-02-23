@@ -6,9 +6,11 @@ logo: '/img/system/logo.png'
 # Site configurations
 gems:
   - jekyll-paginate
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
 excerpt_separator: "<!-- more -->"
 sass:
   sass_dir: /_scss

@@ -23,4 +23,4 @@ permalink: pretty
 comments :
   provider : duoshuo
   duoshuo :
-    short_name : youhandan //替换为你刚刚注册的短名
+    short_name : youhandan

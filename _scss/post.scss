@@ -12,6 +12,11 @@
 
 .post-content table {
   margin: 0 auto;
+  font-size: 1.2rem !important;
+}
+
+.post-content table th {
+  white-space: nowrap; /*表头内容强制在一行显示*/
 }
 
 .post-content em {
@@ -24,7 +29,7 @@
 
 .post-content td, th {
   border: 1px solid green;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 .post-content a {
   color: $green;
@@ -40,6 +45,7 @@
 .post-related {
   margin: 1.5rem;
 }
+
 
 /* Utils */
 .post-content-center-image
